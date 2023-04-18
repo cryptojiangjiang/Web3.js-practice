@@ -2,3 +2,36 @@
 var Web3 = require('web3');
 var web3 = new Web3(new Web3.providers.HttpProvider:"127.0.0.1.7545");
 这样就可以使用web3了
+web3.eth.defaultCommon
+签名交易时所使用的默认通用属性。
+web3.eth.transactionConfirmationBlocks
+一笔交易被认为已确认所需要的区块数
+web3.eth.getProtocolVersion([callback])
+返回节点的以太坊协议版本。
+getCoinbase([callback])
+返回用来收取挖矿奖励的 coinbase 地址
+web3.eth.isSyncing([callback])
+检测当前节点是否正在进行数据同步，返回一个同步对象或``false``。
+web3.eth.isMining([callback])
+检测节点是否正在挖矿。
+web3.eth.getGasPrice([callback])
+返回当前 gas 价格预言机。 gas 价格由最后几个区块 gas 价格的中位数确定。
+web3.eth.getAccounts([callback])
+返回节点所控制的账户列表
+web3.eth.getBlockNumber([callback])
+返回当前区块号。
+web3.eth.getBalance(address [, defaultBlock] [, callback])
+返回地址在指定区块的余额。
+web3.eth.getCode(address [, defaultBlock] [, callback])
+获取特定地址关联的代码。
+web3.eth.getBlock(blockHashOrBlockNumber [, returnTransactionObjects] [, callback])
+返回与区块号或区块哈希匹配的区块。
+web3.eth.getBlockTransactionCount(blockHashOrBlockNumber [, callback])
+返回区块中包含的交易数量。
+web3.eth.getBlockUncleCount(blockHashOrBlockNumber [, callback])
+返回区块中包含的叔块数量。
+web3.eth.getTransaction(transactionHash [, callback])
+返回匹配给定交易哈希的交易对象
+web3.eth.getPendingTransactions([, callback])
+返回处理中的交易列表。
+
